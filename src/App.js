@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import Projects from '../src/components/Projects';
 import Contact from './components/Contact';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './fontawesome';
+
 
 function App() {
   return (

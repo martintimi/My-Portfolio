@@ -116,6 +116,11 @@ p.danger {
   background-color: transparent;
   color: black;
 }
+.navbar_icon_gradient{
+  border-radius: 30% !important;
+  background: linear-gradient(90.21deg, rgba(208, 83, 158, 0.5) -5.91%, rgba(103, 73, 236, 0.5) 111.58%);
+  text-align: center;
+}
 
 nav.navbar {
   padding: 18px 0;
