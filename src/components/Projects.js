@@ -25,7 +25,7 @@ function Projects() {
       title: "Tycoon",
       description: "Lorem Ipsum",
       imgUrl: myproject3,
-      link: "https://tycoon.example.com",
+      link: "https://tycoon-zeta.vercel.app/",
     },
   ];
 
