@@ -13,7 +13,7 @@ function Projects() {
       title: "Real Estate",
       description: "Design & Development",
       imgUrl: myproject,
-      link: "https://vestifyhub.xyzstaging.com/about",
+      link: "https://vestifyhub.xyzstaging.com",
     },
     {
       title: "Timi AI",
