@@ -1,7 +1,8 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import ProjectCard from "./ProjectsCard";
+import ProjectCard from "../components/ProjectsCard";
 import myproject from "../assets/img/my-project.png";
-import myproject2 from "../assets/img/my-project2.png"
+import myproject2 from "../assets/img/my-project2.png";
+import myproject3 from "../assets/img/tycoon.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -12,31 +13,19 @@ function Projects() {
       title: "Real Estate",
       description: "Design & Development",
       imgUrl: myproject,
+      link: "https://vestifyhub.xyzstaging.com/about",
     },
     {
       title: "Timi AI",
       description: "Design & Development",
       imgUrl: myproject2,
+      link: "https://timi-tech.vercel.app/",
     },
     {
-      title: "Real Estate",
-      description: "Design & Development",
-      imgUrl: myproject,
-    },
-    {
-      title: "Timi AI",
-      description: "Design & Development",
-      imgUrl: myproject2,
-    },
-    {
-      title: "Real Estate",
-      description: "Design & Development",
-      imgUrl: myproject,
-    },
-    {
-      title: "Real Estate",
-      description: "Design & Development",
-      imgUrl: myproject,
+      title: "Tycoon",
+      description: "Lorem Ipsum",
+      imgUrl: myproject3,
+      link: "https://tycoon.example.com",
     },
   ];
 
@@ -65,15 +54,13 @@ function Projects() {
                       className="nav-pills mb-5 justify-content-center align-items-center"
                       id="pills-tab"
                     >
-                      <Nav.Item>
-                        <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item>
-                        <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                      </Nav.Item>
-                      <Nav.Item>
-                        <Nav.Link eventKey="third">Tab 3</Nav.Link>
-                      </Nav.Item>
+                      {projects.map((project, index) => (
+                        <Nav.Item key={index}>
+                          <Nav.Link href={project.link} target="_blank">
+                            {project.title}
+                          </Nav.Link>
+                        </Nav.Item>
+                      ))}
                     </Nav>
                     <Tab.Content
                       id="slideInUp"
@@ -88,24 +75,6 @@ function Projects() {
                           })}
                         </Row>
                       </Tab.Pane>
-                      <Tab.Pane eventKey="section">
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Cumque quam, quod neque provident velit, rem
-                          explicabo excepturi id illo molestiae blanditiis,
-                          eligendi dicta officiis asperiores delectus quasi
-                          inventore debitis quo.
-                        </p>
-                      </Tab.Pane>
-                      <Tab.Pane eventKey="third">
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Cumque quam, quod neque provident velit, rem
-                          explicabo excepturi id illo molestiae blanditiis,
-                          eligendi dicta officiis asperiores delectus quasi
-                          inventore debitis quo.
-                        </p>
-                      </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
                 </div>
@@ -114,7 +83,7 @@ function Projects() {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
+      <img className="background-image-right" src={colorSharp2} alt="Background" />
     </section>
   );
 }
