@@ -86,7 +86,10 @@ function NavBar() {
             </div>
             <button className="vvd" onClick={() => console.log("connect")}>
               {" "}
-              <span>Let's connect</span>
+              <span>
+                Let's connect
+              </span>
+              
             </button>
           </span>
         </Navbar.Collapse>

@@ -72,8 +72,11 @@ function Banner() {
                 and modern frameworks, I bring designs to life and
                  ensure they are user-friendly, responsive, and performant.
                 </p>
+                <p>My passion for development goes beyond the workplace. I enjoy working on personal projects, exploring new technologies, and continually improving my skills to stay ahead in the ever-evolving tech landscape.</p>
                 <button onClick={() => console.log("connect")}>
+                  <a href="mailto:matintimi2443@gmail.com">
                   Let's connect <ArrowRightCircle size={24} />
+                  </a>
                 </button>
               </div>}
             </TrackVisibility>
