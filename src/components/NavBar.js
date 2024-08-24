@@ -74,13 +74,13 @@ function NavBar() {
               <FontAwesomeIcon icon={faGithub} size="2x" />
             </a>
             <div className="social-icon">
-              <a href="#">
+              <a href="https://www.linkedin.com/in/martin-timi-15a9382aa/">
                 <img src={navIcon1} alt="" />
               </a>
               <a href="#">
                 <img src={navIcon2} alt="" />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/hxsizn21_/">
                 <img src={navIcon3} alt="" />
               </a>
             </div>
