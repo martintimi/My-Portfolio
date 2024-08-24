@@ -5,6 +5,8 @@ import Navbar from "react-bootstrap/Navbar";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 function NavBar() {
   const [activelink, setActiveLink] = useState("home");
@@ -67,7 +69,10 @@ function NavBar() {
               Projects
             </Nav.Link>
           </Nav>
-          <span className="navber-text">
+          <span className="navbar-text">
+            <a href="https://github.com/martintimi" className="github-icon">
+              <FontAwesomeIcon icon={faGithub} size="2x" />
+            </a>
             <div className="social-icon">
               <a href="#">
                 <img src={navIcon1} alt="" />

@@ -2,6 +2,7 @@ import { Col } from "react-bootstrap";
 
 const ProjectCard = ({ title, description, imgUrl, link }) => {
   return (
+    
     <Col sm={6} md={4}>
       <div className="proj-imgbx">
         <a href={link} target="_blank" rel="noopener noreferrer">

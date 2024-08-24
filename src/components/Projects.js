@@ -3,29 +3,58 @@ import ProjectCard from "../components/ProjectsCard";
 import myproject from "../assets/img/my-project.png";
 import myproject2 from "../assets/img/my-project2.png";
 import myproject3 from "../assets/img/tycoon.png";
+import myproject4 from "../assets/img/project-img4.jpeg";
+import myproject5 from "../assets/img/project_img5.jpeg";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBuilding,
+  faRobot,
+  faStore,
+  faHome,
+  faGraduationCap,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Projects() {
   const projects = [
     {
       title: "Real Estate",
-      description: "Design & Development",
+      description:
+        "Visionaries committed to building a better future through real estate",
       imgUrl: myproject,
       link: "https://vestifyhub.xyzstaging.com",
+      icon: faBuilding,
     },
     {
       title: "Timi AI",
       description: "Design & Development",
       imgUrl: myproject2,
       link: "https://timi-tech.vercel.app/",
+      icon: faRobot,
     },
     {
       title: "Tycoon",
       description: "Lorem Ipsum",
       imgUrl: myproject3,
       link: "https://tycoon-zeta.vercel.app/",
+      icon: faStore,
+    },
+    {
+      title: "Flex Living",
+      description: "Lorem Ipsum",
+      imgUrl: myproject4,
+      link: "https://house-agent-web.vercel.app/",
+      icon: faHome,
+    },
+    {
+      title: "TTA",
+      description:
+        "Tech Talent Academy helps you learn the skills you need to build the career you want.",
+      imgUrl: myproject5,
+      link: "https://web.tta.ng/",
+      icon: faGraduationCap,
     },
   ];
 
@@ -56,7 +85,8 @@ function Projects() {
                     >
                       {projects.map((project, index) => (
                         <Nav.Item key={index}>
-                          <Nav.Link href={project.link} target="_blank">
+                          <Nav.Link eventKey={`project-${index}`}>
+                            <FontAwesomeIcon icon={project.icon} />{" "}
                             {project.title}
                           </Nav.Link>
                         </Nav.Item>
@@ -68,13 +98,13 @@ function Projects() {
                         isVisible ? "animate__animated animate__slideInUp" : ""
                       }
                     >
-                      <Tab.Pane eventKey="first">
-                        <Row>
-                          {projects.map((project, index) => {
-                            return <ProjectCard key={index} {...project} />;
-                          })}
-                        </Row>
-                      </Tab.Pane>
+                      {projects.map((project, index) => (
+                        <Tab.Pane eventKey={`project-${index}`} key={index}>
+                          <Row>
+                            <ProjectCard {...project} />
+                          </Row>
+                        </Tab.Pane>
+                      ))}
                     </Tab.Content>
                   </Tab.Container>
                 </div>
@@ -83,7 +113,11 @@ function Projects() {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2} alt="Background" />
+      <img
+        className="background-image-right"
+        src={colorSharp2}
+        alt="Background"
+      />
     </section>
   );
 }
