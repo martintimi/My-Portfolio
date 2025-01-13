@@ -5,6 +5,9 @@ import myproject2 from "../assets/img/my-project2.png";
 import myproject3 from "../assets/img/tycoon.png";
 import myproject4 from "../assets/img/project-img4.jpeg";
 import myproject5 from "../assets/img/project_img5.jpeg";
+import myproject6 from "../assets/img/projectimgmoni.jpeg";
+import myproject7 from "../assets/img/projectimgonepoint.jpeg";
+
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -15,6 +18,7 @@ import {
   faStore,
   faHome,
   faGraduationCap,
+  faFileInvoiceDollar,
 } from "@fortawesome/free-solid-svg-icons";
 
 function Projects() {
@@ -55,6 +59,22 @@ function Projects() {
       imgUrl: myproject5,
       link: "https://web.tta.ng/",
       icon: faGraduationCap,
+    },
+    {
+      title: "MoniWave",
+      description:
+        "Smart Accounting for your Business.",
+      imgUrl: myproject6,
+      link: "https://moniwave.com/register",
+      icon: faFileInvoiceDollar,
+    },
+    {
+      title: "OnePoint",
+      description:
+        "Simplify your business between Africa and Asia by seamlessly collecting, sending, exchanging and managing multiple-currency wallet on One platform.",
+      imgUrl: myproject7,
+      link: "https://staging.onepointhq.com/",
+      icon: faFileInvoiceDollar,
     },
   ];
 
